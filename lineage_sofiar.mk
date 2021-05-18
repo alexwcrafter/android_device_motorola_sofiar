@@ -30,9 +30,6 @@ VENDOR_EXCEPTION_PATHS := lineage \
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-# Get the prebuilt list of APNs
-$(call inherit-product, vendor/lineage/config/gsm.mk)
-
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
@@ -48,7 +45,7 @@ TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 
 # enable to generate super_empy.img if needed to wipe super partition table
 #BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST += \
-    vendor
+#    vendor
 
 PRODUCT_BUILD_RAMDISK_IMAGE := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
@@ -77,10 +74,10 @@ PRODUCT_NAME := lineage_sofiar
 PRODUCT_DEVICE := sofiar
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_MODEL := moto g8 power
+PRODUCT_MODEL := moto g stylus
 
-TARGET_DEVICE := Moto G8 Power
-PRODUCT_SYSTEM_NAME := Moto G8 Power
+TARGET_DEVICE := Moto G Stylus
+PRODUCT_SYSTEM_NAME := Moto G Stylus
 
 VENDOR_RELEASE := 10/QPE30.79-25/59f4f:user/release-keys
 BUILD_FINGERPRINT := motorola/sofiar_retail/sofiar:$(VENDOR_RELEASE)
